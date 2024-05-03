@@ -1,15 +1,16 @@
+
 ### Problem
 
 Problem: use linear combinations of X to predict y. The idea that linear combination of X is a good way to describe y is our first assumption. Mathematically it can be represented as the Hypothesys Function: 
 
 $$
-\text{Iterative form}\\
+\text{Iterative form} \\
 y^{(i)} \approx h(\theta) = \sum_{j=0}^{d} (\theta_jx_j^{(i)})
 $$
 
 
 $$
-\text{Vector form}\\
+\text{Vector form} 
 \vec{y} \approx h(\theta) = X*\theta
 $$
 
@@ -65,6 +66,7 @@ $$
 
 To find the minimum of J there are two ways:
 * Find the derivative of J with respect to Theta, set it equal to zero and solve the equation for Theta. That's possible for linear regression and the solution is:
+
 $$
 \text{Iterative form}\\
 \frac{\partial}{\partial{\theta_j}} J(\theta) = \frac{1}{n} * \sum_{i=1}^{n} \left(\sum_{j=0}^{d} \left(\theta_{j}x_{j}^{(i)} \right) - y^{(i)} \right) * x_{j}^{(i)} \\
@@ -97,7 +99,7 @@ $$
 
 $$
 \text{Iterative form}\\
-J(\theta) = \frac{1}{n} * \sum_{i=1}^{n} (h^{(i)}(\theta) - y^{(i)})^2 + \lambda * ||\theta||_k^k\\
+J(\theta) = \frac{1}{n} * \sum_{i=1}^{n} (h^{(i)}(\theta) - y^{(i)})^2 + \lambda * ||\theta||^k_k\\
 J(\theta) = \frac{1}{n} * \sum_{i=1}^{n} (\sum_{j=0}^{d} (\theta_{j}x_{j}^{(i)}) - y^{(i)})^2  + \lambda * ||\theta||_k^k\\
 \text{Vector form:} \\
 J(\theta) = \frac{1}{n} * (X*\theta - y)^T*(X*\theta - y) + \lambda * ||\theta||_k^k\\
